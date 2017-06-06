@@ -9,7 +9,8 @@ namespace Euler10
         {
             Int64 start = 5;           
             Int64 sum = 5;
-            int limit = 2000000;
+            Console.WriteLine("Enter maximum");            
+            int limit = Convert.ToInt32(Console.ReadLine());
             double startTime = Environment.TickCount;
             List<Int64> primes = new List<Int64>();            
             primes.Add(3);
@@ -26,7 +27,7 @@ namespace Euler10
                 }
                 
                 sum = sum + start;
-                if (start <= (limit*0.5))
+                if (start <= Math.Sqrt(limit))
                 {
                     primes.Add(start);
                 }
